@@ -36,7 +36,9 @@
 - 위와 과정 동일, BUT binary값으로 바꾸는 대신에 기존 데이터셋의 숫자 데이터 그대로 사용!
 
 ## 결과
-
+1. Binary
+https://github.com/jenny99lee/test/blob/main/image.png
+2.
 
 > 언급해볼 만한 점: 
 - 일반적인 추천 시스템들은 특징을 binary 값으로 반영해서 컨텐츠 based를 함
