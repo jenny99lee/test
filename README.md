@@ -37,8 +37,11 @@
 
 ## 결과
 1. Binary
-https://github.com/jenny99lee/test/blob/main/image.png
-2.
+![image](https://user-images.githubusercontent.com/108797646/194716549-383d0e48-bfa4-4a21-849a-56a2e952e4b4.png)
+
+3. Vector
+![image](https://user-images.githubusercontent.com/108797646/194716525-ef741217-d064-4ecd-90e8-bfdf6a9a2d59.png)
+
 
 > 언급해볼 만한 점: 
 - 일반적인 추천 시스템들은 특징을 binary 값으로 반영해서 컨텐츠 based를 함
