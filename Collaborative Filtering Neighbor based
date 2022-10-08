@@ -53,6 +53,7 @@
 
 ## 결과
 
+
 > 성능
 - Neighbor based CF 모델: RMSE = 3.8330406653778324
 - 1. 최적의 neighbor size로 한 경우: K = 160, RMSE = 4.049282410478079
