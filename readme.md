@@ -18,13 +18,13 @@
 
 ### 2. 오답 선지 생성 (3개)
 - 오답 선지는 총 3개 생성: 매력적인 오답 1개, 일반 오답 2개
-#### - 1) 매력적인 오답 1개: 정답 선지와 특정 키워드는 동일/비슷하되, 오답인 선지
+#### 1) 매력적인 오답 1개: 정답 선지와 특정 키워드는 동일/비슷하되, 오답인 선지
    - 이미지 & 오답 선지 paired dataset 활용: 오답 선지 중 가장 매력적인 오답 선별한 dataset
    - 토익 문제 이미지와 오답 중 가장 매력적인 오답 선지 pair를 BLIP 모델에 학습시킴
    - Stage 1에서 생성된 이미지를 input으로 넣으면 매력적인 오답 선지를 생성하는 BLIP 모델(BLIP-w)이 오답 선지 생성
     - ex) Stage 1에서 생성된 이미지의 매력적인 오답 선지로 'A bike is leaning against a column' prompt 생성
         
-#### - 2) 일반 오답 2개
+#### 2) 일반 오답 2개
    - Action-effect 데이터 활용 
     - Caption & Negative_image_list (대상 (사물 or 사람)은 같으나 해당 caption으로 설명이 되지 않는 image) pair data로 구성
    - Action-effect 데이터로 학습시킨 후, Stage 1에서 생성된 이미지를 input으로 넣으면 랜덤한 오답 선지 2개 생성
