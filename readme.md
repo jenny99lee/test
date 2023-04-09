@@ -4,7 +4,7 @@
 - Stable Diffusion 1.5 모델 활용
 - 글 (Prompt)을 입력하면 Stable Diffusion 1.5을 통해 image가 생성됨
   - ex) 'Black and white photo, Some bicycles have been left unattained'라는 문장 입력하면 자전거가 벽에 기대어 있는 흑백 이미지 생성
-- ![image](https://user-images.githubusercontent.com/108797646/230771341-c4253566-4377-4418-a296-48f35d020ed6.png)
+![image](https://user-images.githubusercontent.com/108797646/230771341-c4253566-4377-4418-a296-48f35d020ed6.png)
 
 ## Stage 2. Image-to-prompt
 - BLIP 모델 활용
@@ -30,7 +30,7 @@
    - Action-effect 데이터로 학습시킨 후, Stage 1에서 생성된 이미지를 input으로 넣으면 랜덤한 오답 선지 2개 생성
     - ex) Stage 1에서 생성된 이미지의 오답 선지로 1) 'The door is no longer on the hinges', 2) 'A person sits on a bicycle and makes it move' prompts 생성
 
-- ![image](https://user-images.githubusercontent.com/108797646/230771911-71e957f3-ac1b-4c26-883e-2b8dd40d5447.png)
+![image](https://user-images.githubusercontent.com/108797646/230771911-71e957f3-ac1b-4c26-883e-2b8dd40d5447.png)
 
 ## Stage 3. Validation
 - CLIP 모델을 활용한 문제 평가
