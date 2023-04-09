@@ -10,21 +10,21 @@
 - BLIP 모델 활용
 - 이미지(Image)를 input으로 넣으면 BLIP을 통해 prompt 생성
 
-1. 정답 선지 생성 (1개)
+### 1. 정답 선지 생성 (1개)
 - 이미지 & 정답 선지 paired dataset 활용
 - 토익 기출문제/모의고사 데이터에서 이미지와 정답 선지 pair를 BLIP 모델에 학습시킴
 - Stage 1에서 생성된 이미지를 input으로 넣으면 정답 선지를 생성하는 BLIP 모델(BLIP-c)이 정답 선지 prompt를 생성
   - ex) Stage 1에서 생성된 이미지의 정답 선지로 'Some bicycles are parked near a wall' prompt 생성
 
-2. 오답 선지 생성 (3개)
+### 2. 오답 선지 생성 (3개)
 - 오답 선지는 총 3개 생성: 매력적인 오답 1개, 일반 오답 2개
-- 1) 매력적인 오답 1개: 정답 선지와 특정 키워드는 동일/비슷하되, 오답인 선지
+#### - 1) 매력적인 오답 1개: 정답 선지와 특정 키워드는 동일/비슷하되, 오답인 선지
    - 이미지 & 오답 선지 paired dataset 활용: 오답 선지 중 가장 매력적인 오답 선별한 dataset
    - 토익 문제 이미지와 오답 중 가장 매력적인 오답 선지 pair를 BLIP 모델에 학습시킴
    - Stage 1에서 생성된 이미지를 input으로 넣으면 매력적인 오답 선지를 생성하는 BLIP 모델(BLIP-w)이 오답 선지 생성
     - ex) Stage 1에서 생성된 이미지의 매력적인 오답 선지로 'A bike is leaning against a column' prompt 생성
         
-- 2) 일반 오답 2개
+#### - 2) 일반 오답 2개
    - Action-effect 데이터 활용 
     - Caption & Negative_image_list (대상 (사물 or 사람)은 같으나 해당 caption으로 설명이 되지 않는 image) pair data로 구성
    - Action-effect 데이터로 학습시킨 후, Stage 1에서 생성된 이미지를 input으로 넣으면 랜덤한 오답 선지 2개 생성
@@ -42,10 +42,10 @@
 ![image](https://user-images.githubusercontent.com/108797646/230772471-a84ea54d-56e4-4545-a836-b6f06863a43b.png)
 
 # Trial And Error
-1) Multiple Datasets
+#### 1) Multiple Datasets
   - 데이터셋의 종류와 조합(비례배분)에 따라 모델의 성능의 차이가 많이 남
   
-2) GPT2 모델  
+#### 2) GPT2 모델  
   - 단어 1개 / 단어 뭉치 / 문장 입력하면 이어서 문장 작성 (동일 주제 문장 생성) 가능
   - 하지만 유사한 의미의 문장은 생성해내지 못함
   - → BLIP으로 오답 선지 학습시켜 문장 생성해냄
